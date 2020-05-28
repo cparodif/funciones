@@ -56,9 +56,9 @@ def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
     if (numCaracteres == 3):
         if (pPosicion[1] == "."):
             x1= int(pPosicion[0])-1
-            x2= int(pPosicion[2])
+            x2= int(pPosicion[2])-1
             datosParaAnalizar = hexadecimalEnBinario(pTrama[x1])
-            datosParaAnalizar = datosParaAnalizar[x2:]
+            datosParaAnalizar = datosParaAnalizar[x2:x2+y]
 
         if (pPosicion[1] == "-"):
             #inluir los dos bytes, de la trama pero en orden inverso
@@ -68,12 +68,12 @@ def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
 
     return datosParaAnalizar
 
-def datosEstanDisponibles(xDatosParaAnalizar):
-    for x in xDatosParaAnalizar:
-        if (x == "0"):
+def datosEstanDisponibles(x):
+    # x = DatosParaAnalizar
+    for i in range(len(x)):
+        if (x[i] == "0"):
             return "Datos disponibles"
-        else:
-            return "Datos no disponibles"
+    return "Datos no disponibles"
 
 def contienenSenalesValidasDelVehiculo(x):
     #x es el PGNdLineaCanBus
