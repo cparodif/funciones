@@ -31,7 +31,7 @@ def numeroDeBits(pLongitud):
         y = 32
     return y
 
-def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
+def extraexBitsParaAnalizarValidez(pTramah, pPosicion, pLongitud):
 # posicionDecimalDeLaTramaEnBinario("00 00 00 0c 06 54 23 41", "1.3", "2 bits"):
     pTramah.strip()
     pTrama = pTramah.split(" ")
