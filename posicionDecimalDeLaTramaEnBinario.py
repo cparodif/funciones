@@ -8,7 +8,7 @@ def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
         x = pPosicion
     if (numCaracteres == 3):
         if (pPosicion[1] == "."):
-            x = pPosicion
+            x= ((int(pPsicion[0])-1)*8)+int(pPsicion[1])-1
             
         if (pPosicion[1] == "-"):
             x = pPosicion
@@ -47,8 +47,6 @@ def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
 
 
 def datosDeLaTrama(pTrama, pPosicion, pLongitud):
-    posicionIncial= ((int(pPsicion[0])-1)*8)+int(pPsicion[1])-1
-    longitud = plongitud
-    xTrama = pTrama[]
+    xTrama = pTrama[pPosicion:pLongitud]
 
 def datosEstanDisponibles():
