@@ -1,18 +1,32 @@
 def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
 # posicionDecimalDeLaTramaEnBinario("00 00 00 0c 06 54 23 41", "1.3", "2 bits"):    
     # posicion "1.3" o "2-3"
+    pTrama[0] = pTramah[0:2]
+    pTrama[1] = pTramah[3:2]
+    pTrama[2] = pTramah[6:2]
+    pTrama[3] = pTramah[9:2]
+    pTrama[4] = pTramah[12:2]
+    pTrama[5] = pTramah[15:2]
+    pTrama[6] = pTramah[17:2]
+    pTrama[7] = pTramah[19:2]
+    
     numCaracteres = len(pPosicion)
     if (numCaracteres == 1):
         x = pPosicion
     if (numCaracteres == 2):
         x = pPosicion
+        
     if (numCaracteres == 3):
         if (pPosicion[1] == "."):
             x= ((int(pPsicion[0])-1)*8)+int(pPsicion[1])-1
+            datosParaAnalizar = hexadecimalEnBinario(pTrama[int(pPosicion[0])])
             
         if (pPosicion[1] == "-"):
             #inluir los dos bytes, de la trama pero en orden inverso
-            x = pPosicion
+            x1 = int(pPosicion[0])-1
+            x2 = int(pPosicion[2])-1
+            datosParaAnalizar = hexadecimalEnBinario(x2)+hexadecimalEnBinario(x1)
+            
 
     if (pLongitud == "1 bit")
          y = 1
@@ -43,7 +57,7 @@ def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
     if (pLongitud == "4 bytes")
         y = 32
     
-    datosParaAnalizar = pTrama[x:y]
+    
     
     return datosParaAnalizar
 
