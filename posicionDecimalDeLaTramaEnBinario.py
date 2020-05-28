@@ -11,6 +11,7 @@ def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
             x= ((int(pPsicion[0])-1)*8)+int(pPsicion[1])-1
             
         if (pPosicion[1] == "-"):
+            #inluir los dos bytes, de la trama pero en orden inverso
             x = pPosicion
 
     if (pLongitud == "1 bit")
