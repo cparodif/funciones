@@ -1,5 +1,5 @@
 def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
-# posicionDecimalDeLaTramaEnBinario("C010305", "1.3", "2 bits"):    
+# posicionDecimalDeLaTramaEnBinario("00 00 00 0c 06 54 23 41", "1.3", "2 bits"):    
     # posicion "1.3" o "2-3"
     numCaracteres = len(pPosicion)
     if (numCaracteres == 1):
