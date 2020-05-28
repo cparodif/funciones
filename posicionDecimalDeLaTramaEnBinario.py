@@ -41,12 +41,12 @@ def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
         y = 24
     if (pLongitud == "4 bytes")
         y = 32
-
-    datosParaAnalizar = datosDeLaTrama(pTramah, x, y)
+    
+    datosParaAnalizar = pTrama[x:y]
+    
     return datosParaAnalizar
 
 
-def datosDeLaTrama(pTrama, pPosicion, pLongitud):
-    xTrama = pTrama[pPosicion:pLongitud]
+    
 
 def datosEstanDisponibles():
