@@ -2,13 +2,13 @@ def posicionDecimalDeLaTramaEnBinario(pTramah, pPosicion, pLongitud):
 # posicionDecimalDeLaTramaEnBinario("00 00 00 0c 06 54 23 41", "1.3", "2 bits"):    
     # posicion "1.3" o "2-3"
     pTrama[0] = pTramah[0:2]
-    pTrama[1] = pTramah[3:2]
-    pTrama[2] = pTramah[6:2]
-    pTrama[3] = pTramah[9:2]
-    pTrama[4] = pTramah[12:2]
-    pTrama[5] = pTramah[15:2]
-    pTrama[6] = pTramah[17:2]
-    pTrama[7] = pTramah[19:2]
+    pTrama[1] = pTramah[3:5]
+    pTrama[2] = pTramah[6:8]
+    pTrama[3] = pTramah[9:11]
+    pTrama[4] = pTramah[12:14]
+    pTrama[5] = pTramah[15:17]
+    pTrama[6] = pTramah[18:20]
+    pTrama[7] = pTramah[21:23]
     
     numCaracteres = len(pPosicion)
     if (numCaracteres == 1):
